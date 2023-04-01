@@ -1,1 +1,2 @@
-# adminDashboarddddd
+# React frontEnd app for Admin Dashboard
+
