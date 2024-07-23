@@ -28,7 +28,7 @@ const Dashboard = () => {
               color: colors.grey[100],
               fontSize: "14px",
               fontWeight: "bold",
-              padding: "10px 20px",
+              padding: "10px 21px",
             }}
           >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
