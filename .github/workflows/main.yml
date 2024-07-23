@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: NodeJs Setup
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ secrets.node_version }}
+          node-version: ${{ secrets.NODE_VERSION }}
 
       - name: Dependency Installation
         run: npm install
@@ -25,11 +25,11 @@ jobs:
         run: npm run build
 
       - name: Config AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
-          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
       - name: Deploy to AWS S3
-        run: aws s3 sync build s3://react-dashboard-new -delete
+        run: aws s3 sync build s3://react-dashboard-new --delete
