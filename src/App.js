@@ -6,14 +6,6 @@ import Dashboard from "./scenes/dashboard/Dashboard";
 import Sidebar from "./scenes/globle/Sidebar";
 import Team from "./scenes/team/Team";
 import Contacts from "./scenes/contacts/Contacts";
-// import Invoices from "./scenes/invoices";
-// import Contacts from "./scenes/contacts";
-// import Bar from "./scenes/bar";
-// import Form from "./scenes/form";
-
-// import FAQ from "./scenes/faq";
-// import Geography from "./scenes/geography";
-// import Calendar from "./scenes/calendar";
 import { Route, Routes } from "react-router-dom";
 import Invoices from "./scenes/invoices/Invoices";
 import Form from "./scenes/form/Form";
